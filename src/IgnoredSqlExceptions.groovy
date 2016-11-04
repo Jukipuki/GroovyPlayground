@@ -1,0 +1,8 @@
+
+enum IgnoredSqlExceptions {
+
+    ;
+
+    int sqlCode;
+
+}

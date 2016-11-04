@@ -54,6 +54,10 @@ class W2moVersion implements Comparable<W2moVersion> {
         return compare(this.patch, o.patch)
     }
 
+    public static W2moVersion getVersionNullable(String version) {
+        return version ? new W2moVersion(version) : null;
+    }
+
     private void parseVersion(Matcher matcher) {
         def groups = matcher[0] as ArrayList
         this.major = groups.get(1) as int;
